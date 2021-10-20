@@ -110,6 +110,19 @@ To apply the model to the prediction dataset, I use a **new Spark 3.0 experiment
 This Dataframe method maps an iterator of batches (pandas Dataframe) using a prediction used-defined function that 
 outputs also a pandas Dataframe. This is done thanks to `PyArrow` efficient data transfer between Spark JVM and python pandas runtime.
 
+```Bash
+pipenv run python categories_classification_cli.py predictor --help
+
+Usage: categories_classification_cli.py predictor [OPTIONS]
+
+  :param client_id: :param inference_date: :return:
+
+Options:
+  --client_id TEXT       The id of the client.  [required]
+  --inference_date TEXT  The inference date.  [required]
+  --help                 Show this message and exit.
+```
+
 ### Prediction function
 
 The advantage of `mapInPandas` feature comparing to classic `pandas_udf` is that we can add more rows than we have as input.
