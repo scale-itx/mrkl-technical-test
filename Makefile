@@ -16,7 +16,7 @@ unit-tests:
 	pipenv run pytest tests --pdb
 
 generate-dags:
-	docker-compose -f docker-compose_airflow.yaml run --rm airflow-cli python scripts/generate_dags.py
+	docker-compose -f docker-compose_airflow.yaml run --rm airflow-worker python scripts/generate_dags.py
 
 follow-logs:
 	docker-compose -f docker-compose_airflow.yaml logs -f
