@@ -1,5 +1,6 @@
 init-airflow:
 	echo "AIRFLOW_UID=$$(id -u)" > .env
+	mkdir -p data/mlruns
 	docker-compose -f docker-compose_airflow.yaml build
 	docker-compose -f docker-compose_airflow.yaml up airflow-init
 
