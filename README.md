@@ -1,7 +1,8 @@
 # Mirakl technical test: implement a classification workflow
 
 ⚠️ **The step to reproduce training and inference are in the end of this file, sorry for the long explanation.**
-🚧 **Data was not included in code, you need to cpoy it to data directly.**
+
+🚧 **Data was not included in code, you need to copy it to data directly.**
 
 ```bash
 unzip data.zip
